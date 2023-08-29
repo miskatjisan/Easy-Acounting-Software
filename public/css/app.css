@@ -1,0 +1,53 @@
+.log-reg{
+    background-color: #08a349;
+    border-color:#146c43;
+}
+form .LogOrReg{
+    text-decoration: none !important;
+    color: #fff !important;
+}
+.flex-shrink-0 ul li a{
+    text-decoration: none !important;
+    color: #ddd !important;
+    
+}
+
+.flex-shrink-0 ul li ul li:hover{
+    padding: 5px;
+    background-color: #157347;
+    color: #fff;
+    border-color:#146c43;
+}
+
+.navbar .navbar-nav .nav-item a{
+    text-decoration: none !important;
+    color: #fff;
+
+}
+
+.navbar .navbar-nav .nav-item:hover{
+    padding: 3px;
+    background-color: #157347;
+}
+.navbar .navbar-nav .nav-item .dropdown .dropdown-menu .dropdown-item{
+    color: #333 !important;
+}
+.navbar .navbar-nav .nav-item .dropdown .dropdown-menu .dropdown-item:hover{
+    color: #fff !important;
+}
+.dropdown-item:hover, .dropdown-item:focus{
+    background-color: #157347 !important;
+
+}
+
+.navbar ul li ul li:hover{
+    padding: 5px;
+    background-color: #157347 !important;
+}
+
+.col-3 .nav-link .card .card-body{
+    display: block;
+    text-align: center;
+    color: #fff;
+}
+
