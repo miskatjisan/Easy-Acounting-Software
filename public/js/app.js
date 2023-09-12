@@ -22361,10 +22361,57 @@ var ReportsModule = function ReportsModule() {
 var CRMModule = function CRMModule() {
   return __webpack_require__.e(/*! import() */ "resources_js_components_CRMModule_vue").then(__webpack_require__.bind(__webpack_require__, /*! ../components/CRMModule.vue */ "./resources/js/components/CRMModule.vue"));
 };
+/* Settings */
 var Settings = function Settings() {
   return __webpack_require__.e(/*! import() */ "resources_js_components_Settings_vue").then(__webpack_require__.bind(__webpack_require__, /*! ../components/Settings.vue */ "./resources/js/components/Settings.vue"));
 };
-/* Authenticated Component */
+var ItemEntry = function ItemEntry() {
+  return __webpack_require__.e(/*! import() */ "resources_js_components_settings_ItemEntry_vue").then(__webpack_require__.bind(__webpack_require__, /*! ../components/settings/ItemEntry.vue */ "./resources/js/components/settings/ItemEntry.vue"));
+};
+var EditItem = function EditItem() {
+  return __webpack_require__.e(/*! import() */ "resources_js_components_settings_EditItem_vue").then(__webpack_require__.bind(__webpack_require__, /*! ../components/settings/EditItem.vue */ "./resources/js/components/settings/EditItem.vue"));
+};
+var UnitMeasurementEntry = function UnitMeasurementEntry() {
+  return __webpack_require__.e(/*! import() */ "resources_js_components_settings_Unit_MeasureEntry_vue").then(__webpack_require__.bind(__webpack_require__, /*! ../components/settings/Unit&MeasureEntry.vue */ "./resources/js/components/settings/Unit&MeasureEntry.vue"));
+};
+var EditUnitMeasurement = function EditUnitMeasurement() {
+  return __webpack_require__.e(/*! import() */ "resources_js_components_settings_EditUnit_Measure_vue").then(__webpack_require__.bind(__webpack_require__, /*! ../components/settings/EditUnit&Measure.vue */ "./resources/js/components/settings/EditUnit&Measure.vue"));
+};
+var GroupEntry = function GroupEntry() {
+  return __webpack_require__.e(/*! import() */ "resources_js_components_settings_GroupEntry_vue").then(__webpack_require__.bind(__webpack_require__, /*! ../components/settings/GroupEntry.vue */ "./resources/js/components/settings/GroupEntry.vue"));
+};
+var EditGroup = function EditGroup() {
+  return __webpack_require__.e(/*! import() */ "resources_js_components_settings_EditGroup_vue").then(__webpack_require__.bind(__webpack_require__, /*! ../components/settings/EditGroup.vue */ "./resources/js/components/settings/EditGroup.vue"));
+};
+var CategoryEntry = function CategoryEntry() {
+  return __webpack_require__.e(/*! import() */ "resources_js_components_settings_CategoryEntry_vue").then(__webpack_require__.bind(__webpack_require__, /*! ../components/settings/CategoryEntry.vue */ "./resources/js/components/settings/CategoryEntry.vue"));
+};
+var EditCategory = function EditCategory() {
+  return __webpack_require__.e(/*! import() */ "resources_js_components_settings_EditCategory_vue").then(__webpack_require__.bind(__webpack_require__, /*! ../components/settings/EditCategory.vue */ "./resources/js/components/settings/EditCategory.vue"));
+};
+var WarehouseEntry = function WarehouseEntry() {
+  return __webpack_require__.e(/*! import() */ "resources_js_components_settings_WarehouseEntry_vue").then(__webpack_require__.bind(__webpack_require__, /*! ../components/settings/WarehouseEntry.vue */ "./resources/js/components/settings/WarehouseEntry.vue"));
+};
+var EditWarehouse = function EditWarehouse() {
+  return __webpack_require__.e(/*! import() */ "resources_js_components_settings_EditWarehouse_vue").then(__webpack_require__.bind(__webpack_require__, /*! ../components/settings/EditWarehouse.vue */ "./resources/js/components/settings/EditWarehouse.vue"));
+};
+var BranchEntry = function BranchEntry() {
+  return __webpack_require__.e(/*! import() */ "resources_js_components_settings_BranchEntry_vue").then(__webpack_require__.bind(__webpack_require__, /*! ../components/settings/BranchEntry.vue */ "./resources/js/components/settings/BranchEntry.vue"));
+};
+var EditBranch = function EditBranch() {
+  return __webpack_require__.e(/*! import() */ "resources_js_components_settings_EditBranch_vue").then(__webpack_require__.bind(__webpack_require__, /*! ../components/settings/EditBranch.vue */ "./resources/js/components/settings/EditBranch.vue"));
+};
+var UserEntry = function UserEntry() {
+  return __webpack_require__.e(/*! import() */ "resources_js_components_settings_UserEntry_vue").then(__webpack_require__.bind(__webpack_require__, /*! ../components/settings/UserEntry.vue */ "./resources/js/components/settings/UserEntry.vue"));
+};
+var EditUser = function EditUser() {
+  return __webpack_require__.e(/*! import() */ "resources_js_components_settings_EditUser_vue").then(__webpack_require__.bind(__webpack_require__, /*! ../components/settings/EditUser.vue */ "./resources/js/components/settings/EditUser.vue"));
+};
+var EditCompanyProfile = function EditCompanyProfile() {
+  return __webpack_require__.e(/*! import() */ "resources_js_components_settings_EditCompanyProfile_vue").then(__webpack_require__.bind(__webpack_require__, /*! ../components/settings/EditCompanyProfile.vue */ "./resources/js/components/settings/EditCompanyProfile.vue"));
+};
+
+/* End Authenticated Component */
 
 var routes = [{
   name: "login",
@@ -22472,12 +22519,148 @@ var routes = [{
     meta: {
       title: "CRM Module"
     }
-  }, {
+  }, /* Settings */
+  {
     name: "settings",
     path: '/settings',
     component: Settings,
     meta: {
       title: "Settings"
+    }
+  }, /* Item */
+
+  {
+    name: "itemEntry",
+    path: '/settings/item/entry',
+    component: ItemEntry,
+    meta: {
+      title: "Item Entry"
+    }
+  }, {
+    name: "editItem",
+    path: '/settings/item/:id/edit',
+    component: EditItem,
+    props: true,
+    meta: {
+      title: "Update Item"
+    }
+  }, /* Unit & Measurement */
+
+  {
+    name: "unit&MeasureEntry",
+    path: '/settings/unit&measurement/entry',
+    component: UnitMeasurementEntry,
+    props: true,
+    meta: {
+      title: "Unit & Measurement Entry"
+    }
+  }, {
+    name: "editUnit&Measurement",
+    path: '/settings/unit&measurement/:id/edit',
+    component: EditUnitMeasurement,
+    props: true,
+    meta: {
+      title: "Update Unit & Measurement"
+    }
+  }, /* Group */
+
+  {
+    name: "groupEntry",
+    path: '/settings/group/entry',
+    component: GroupEntry,
+    props: true,
+    meta: {
+      title: "Group Entry"
+    }
+  }, {
+    name: "editGroup",
+    path: '/settings/group/:id/edit',
+    component: EditGroup,
+    props: true,
+    meta: {
+      title: "Update Edit Group"
+    }
+  }, /* Category */
+
+  {
+    name: "categoryEntry",
+    path: '/settings/category/entry',
+    component: CategoryEntry,
+    props: true,
+    meta: {
+      title: "Category Entry"
+    }
+  }, {
+    name: "editCategory",
+    path: '/settings/category/:id/edit',
+    component: EditCategory,
+    props: true,
+    meta: {
+      title: "Update Edit Category"
+    }
+  }, /* Warehouse */
+
+  {
+    name: "warehouseEntry",
+    path: '/settings/warehouse/entry',
+    component: WarehouseEntry,
+    props: true,
+    meta: {
+      title: "Warehouse Entry"
+    }
+  }, {
+    name: "editWarehouse",
+    path: '/settings/warehouse/:id/edit',
+    component: EditWarehouse,
+    props: true,
+    meta: {
+      title: "Update Edit Warehouse"
+    }
+  }, /* Branch */
+
+  {
+    name: "branchEntry",
+    path: '/settings/branch/entry',
+    component: BranchEntry,
+    props: true,
+    meta: {
+      title: "Branch Entry"
+    }
+  }, {
+    name: "editBranch",
+    path: '/settings/branch/:id/edit',
+    component: EditBranch,
+    props: true,
+    meta: {
+      title: "Update Edit Branch"
+    }
+  }, /* User */
+
+  {
+    name: "userEntry",
+    path: '/settings/user/entry',
+    component: UserEntry,
+    props: true,
+    meta: {
+      title: "User Entry"
+    }
+  }, {
+    name: "editUser",
+    path: '/settings/user/:id/edit',
+    component: EditUser,
+    props: true,
+    meta: {
+      title: "Update Edit User"
+    }
+  }, /* Update Profile */
+
+  {
+    name: "editCompanyProfile",
+    path: '/settings/company/:id/edit',
+    component: EditCompanyProfile,
+    props: true,
+    meta: {
+      title: "Update Edit Company Profile"
     }
   }]
 }];
@@ -50443,7 +50626,7 @@ function useRoute() {
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames not based on template
-/******/ 			if ({"resources_js_components_Login_vue":1,"resources_js_components_Register_vue":1,"resources_js_components_layouts_Default_vue":1,"resources_js_components_Dashboard_vue":1,"resources_js_components_SalesModule_vue":1,"resources_js_components_QuotationsModule_vue":1,"resources_js_components_OrdersModule_vue":1,"resources_js_components_ServicesModule_vue":1,"resources_js_components_PurchaseModule_vue":1,"resources_js_components_ManufacturingsModule_vue":1,"resources_js_components_InventoryModule_vue":1,"resources_js_components_FinancialAccounts_vue":1,"resources_js_components_HR_Payroll_vue":1,"resources_js_components_ReportsModule_vue":1,"resources_js_components_CRMModule_vue":1,"resources_js_components_Settings_vue":1}[chunkId]) return "js/" + chunkId + ".js";
+/******/ 			if ({"resources_js_components_Login_vue":1,"resources_js_components_Register_vue":1,"resources_js_components_layouts_Default_vue":1,"resources_js_components_Dashboard_vue":1,"resources_js_components_SalesModule_vue":1,"resources_js_components_QuotationsModule_vue":1,"resources_js_components_OrdersModule_vue":1,"resources_js_components_ServicesModule_vue":1,"resources_js_components_PurchaseModule_vue":1,"resources_js_components_ManufacturingsModule_vue":1,"resources_js_components_InventoryModule_vue":1,"resources_js_components_FinancialAccounts_vue":1,"resources_js_components_HR_Payroll_vue":1,"resources_js_components_ReportsModule_vue":1,"resources_js_components_CRMModule_vue":1,"resources_js_components_Settings_vue":1,"resources_js_components_settings_ItemEntry_vue":1,"resources_js_components_settings_EditItem_vue":1,"resources_js_components_settings_Unit_MeasureEntry_vue":1,"resources_js_components_settings_EditUnit_Measure_vue":1,"resources_js_components_settings_GroupEntry_vue":1,"resources_js_components_settings_EditGroup_vue":1,"resources_js_components_settings_CategoryEntry_vue":1,"resources_js_components_settings_EditCategory_vue":1,"resources_js_components_settings_WarehouseEntry_vue":1,"resources_js_components_settings_EditWarehouse_vue":1,"resources_js_components_settings_BranchEntry_vue":1,"resources_js_components_settings_EditBranch_vue":1,"resources_js_components_settings_UserEntry_vue":1,"resources_js_components_settings_EditUser_vue":1,"resources_js_components_settings_EditCompanyProfile_vue":1}[chunkId]) return "js/" + chunkId + ".js";
 /******/ 			// return url for filenames based on template
 /******/ 			return undefined;
 /******/ 		};
