@@ -8,9 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Item extends Model
 {
     protected $fillable = [
-        'name', 'barcode', 'group', 'category', 'unt', 'is_sevice', 'is_serial', 'narration',
-        'qty', 'min_sale_rate', 'purchase_rate', 'default_sale_rate', 'wolesaler_rate',
-        'retailer_rate', 'corporate_rate', 'distributor_rate', 'discount', 'vat',
+        'name', 'barcode', 'group', 'category', 'unit', 'is_sevice', 'is_serial', 'narration','qty', 'min_sale_rate', 'purchase_rate', 'default_sale_rate', 'wolesaler_rate','retailer_rate', 'corporate_rate', 'distributor_rate', 'discount','vat',
     ];
 
     protected static function booted()

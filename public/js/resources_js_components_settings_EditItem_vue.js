@@ -29,6 +29,10 @@ __webpack_require__.r(__webpack_exports__);
     this.fetchUnits();
   },
   methods: {
+    handleImageChange: function handleImageChange(event) {
+      // Capture the selected image file
+      this.item.image = event.target.files[0];
+    },
     fetchItem: function fetchItem() {
       var _this = this;
       var itemId = this.$route.params.id;
@@ -44,8 +48,13 @@ __webpack_require__.r(__webpack_exports__);
       var itemId = this.$route.params.id;
       axios.put("/api/items/".concat(itemId), this.item).then(function () {
         _this2.$router.push('/settings/item/entry');
+        // Handle success, e.g., show a success message
+        _this2.successMessage = response.data.message;
+        _this2.errorMessage = ''; // Clear any previous error message
       })["catch"](function (error) {
-        console.error(error);
+        // Handle errors, e.g., show an error message
+        _this2.errorMessage = 'An error occurred while updating the product. Please try again later.';
+        console.error(error); // Log the error for debugging
       })["finally"](function () {
         _this2.processing = false;
       });
@@ -248,13 +257,20 @@ var _hoisted_57 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
 }, "Vat %", -1 /* HOISTED */);
 var _hoisted_58 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("br", null, null, -1 /* HOISTED */);
 var _hoisted_59 = {
+  "class": "col-lg-3 col-md-4 col-sm-6 col-xs-12 mt-3"
+};
+var _hoisted_60 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
+  "for": "image"
+}, "Upload Item Image", -1 /* HOISTED */);
+var _hoisted_61 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("br", null, null, -1 /* HOISTED */);
+var _hoisted_62 = {
   "class": "mt-3"
 };
-var _hoisted_60 = ["disabled"];
+var _hoisted_63 = ["disabled"];
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_router_link = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("router-link");
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [_hoisted_2, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Update Item "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_5, [_hoisted_6, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("form", {
-    onSubmit: _cache[21] || (_cache[21] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.withModifiers)(function () {
+    onSubmit: _cache[22] || (_cache[22] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.withModifiers)(function () {
       return $options.updateItem && $options.updateItem.apply($options, arguments);
     }, ["prevent"]))
   }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_7, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_8, [_hoisted_9, (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
@@ -471,11 +487,18 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       return $data.item.vat = $event;
     }),
     placeholder: "Vat %..."
-  }, null, 512 /* NEED_PATCH */), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.item.vat]])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_59, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+  }, null, 512 /* NEED_PATCH */), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.item.vat]])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_59, [_hoisted_60, _hoisted_61, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+    type: "file",
+    "class": "form-control",
+    id: "image",
+    onChange: _cache[21] || (_cache[21] = function () {
+      return $options.handleImageChange && $options.handleImageChange.apply($options, arguments);
+    })
+  }, null, 32 /* HYDRATE_EVENTS */)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_62, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
     type: "submit",
     "class": "btn btn-success m-2",
     disabled: $data.processing
-  }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($data.processing ? "Please wait" : "Update Item"), 9 /* TEXT, PROPS */, _hoisted_60), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
+  }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($data.processing ? "Please wait" : "Update Item"), 9 /* TEXT, PROPS */, _hoisted_63), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
     "class": "btn btn-primary m-2",
     to: "/"
   }, {

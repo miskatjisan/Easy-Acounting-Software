@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Validator;
 use Illuminate\Http\Request;
 use App\Models\Item;
 use App\Models\Group;
@@ -14,16 +16,33 @@ class ItemController extends Controller
 {
     public function index()
     {
-        return Item::all();
-        return Group::all();
-        return Category::all();
-        return Unit::all();
+    return Item::all();
+    return Group::all();
+    return Category::all();
+    return Category::all();
+    return Unit::all();
+
     }
 
+   
+   
     public function store(Request $request)
     {
-        return Item::create($request->all());
+        $validator = Validator::make($request->all(), [
+            'name' => ['required', 'string', 'max:255'],
+          
+        ]);
+
+        // If validation fails, return the validation errors
+        if ($validator->fails()) {
+            return response()->json(['errors' => $validator->errors()], 422);
+        }
+
+         Item::create($request->all());
+            return response()->json(['message' => 'Item Added Successfully.']);
+        
     }
+  
 
     public function show($id)
     {
@@ -36,10 +55,11 @@ class ItemController extends Controller
         $item->update($request->all());
         return $item;
     }
-
+    
+      
     public function destroy($id)
     {
         Item::findOrFail($id)->delete();
-        return response()->json(['message' => 'Item deleted']);
+        return response()->json(['message' => 'Item deleted Successfully.']);
     }
 }

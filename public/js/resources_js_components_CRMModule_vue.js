@@ -35,7 +35,7 @@ __webpack_require__.r(__webpack_exports__);
 var _hoisted_1 = {
   "class": "row"
 };
-var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"col-2\"><div class=\"flex-shrink-0 p-3 bg-success\"><ul class=\"list-unstyled ps-0\"><li class=\"mb-1\"><button class=\"btn btn-success btn-toggle align-items-center rounded collapsed\" data-bs-toggle=\"collapse\" data-bs-target=\"#crmModule-collapse\" aria-expanded=\"false\"> CRM Module </button><div class=\"collapse\" id=\"crmModule-collapse\"><ul class=\"btn-toggle-nav list-unstyled fw-semibold pb-1 small\"><li><a href=\"#\" class=\"link-light rounded\">Customer Entry</a></li><li><a href=\"#\" class=\"link-light rounded\">Pending Customer List</a></li><li><a href=\"#\" class=\"link-light rounded\">Approved Customer List</a></li><li><a href=\"#\" class=\"link-light rounded\">Rejected Customer List</a></li><li><a href=\"#\" class=\"link-light rounded\">Employee Wise Customer List</a></li></ul></div></li></ul></div></div>", 1);
+var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"col-2\"><div class=\"flex-shrink-0 p-3 bg-success\"><ul class=\"list-unstyled ps-0\"><li class=\"mb-1\"><button class=\"btn btn-success btn-toggle align-items-center rounded collapsed\" data-bs-toggle=\"collapse\" data-bs-target=\"#crmModule-collapse\" aria-expanded=\"false\"> CRM Module </button><div class=\"collapse\" id=\"crmModule-collapse\"><ul class=\"btn-toggle-nav list-unstyled fw-semibold pb-1 small\"><li><a href=\"#\" class=\"link-light rounded\">Customer Entry</a></li><li><a href=\"#\" class=\"link-light rounded\">Customer List</a></li></ul></div></li></ul></div></div>", 1);
 var _hoisted_3 = {
   "class": "col-10"
 };
@@ -64,37 +64,7 @@ var _hoisted_9 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementV
   "class": "card-body"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
   "class": "fa-solid fa-chalkboard-user fs-4"
-}), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h6", null, "Pending Customer List")])], -1 /* HOISTED */);
-var _hoisted_10 = {
-  "class": "col-3 mt-3"
-};
-var _hoisted_11 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-  "class": "card bg-success"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-  "class": "card-body"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
-  "class": "fa-solid fa-chalkboard-user fs-4"
-}), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h6", null, "Approved Customer List")])], -1 /* HOISTED */);
-var _hoisted_12 = {
-  "class": "col-3 mt-3"
-};
-var _hoisted_13 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-  "class": "card bg-success"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-  "class": "card-body"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
-  "class": "fa-solid fa-chalkboard-user fs-4"
-}), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h6", null, "Rejected Customer List")])], -1 /* HOISTED */);
-var _hoisted_14 = {
-  "class": "col-3 mt-3"
-};
-var _hoisted_15 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-  "class": "card bg-success"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-  "class": "card-body"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
-  "class": "fa-solid fa-chalkboard-user fs-4"
-}), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h6", null, "Employee Wise Customer List")])], -1 /* HOISTED */);
+}), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h6", null, "Customer List")])], -1 /* HOISTED */);
 
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_router_link = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("router-link");
@@ -108,7 +78,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       return [_hoisted_7];
     }),
     _: 1 /* STABLE */
-  })]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_8, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
+  })]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <div class=\"col-3 mt-3\">\r\n    <router-link :to=\"{name:'salesModule'}\" class=\"nav-link\">\r\n    <div class=\"card bg-success\">\r\n      <div class=\"card-body\">\r\n       <i class=\"fa-solid fa-chalkboard-user fs-4\"></i>\r\n        <h6>Pending Customer List</h6>\r\n      </div>\r\n    </div>\r\n  </router-link>\r\n  </div>\r\n \r\n  <div class=\"col-3 mt-3\">\r\n    <router-link :to=\"{name:'salesModule'}\" class=\"nav-link\">\r\n    <div class=\"card bg-success\">\r\n      <div class=\"card-body\">\r\n        <i class=\"fa-solid fa-chalkboard-user fs-4\"></i>\r\n        <h6>Approved Customer List</h6>\r\n      </div>\r\n    </div>\r\n  </router-link>\r\n  </div>\r\n\r\n  <div class=\"col-3 mt-3\">\r\n    <router-link :to=\"{name:'salesModule'}\" class=\"nav-link\">\r\n    <div class=\"card bg-success\">\r\n      <div class=\"card-body\">\r\n        <i class=\"fa-solid fa-chalkboard-user fs-4\"></i>\r\n        <h6>Rejected Customer List</h6>\r\n      </div>\r\n    </div>\r\n  </router-link>\r\n  </div> "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_8, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
     to: {
       name: 'salesModule'
     },
@@ -116,36 +86,6 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   }, {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
       return [_hoisted_9];
-    }),
-    _: 1 /* STABLE */
-  })]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_10, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
-    to: {
-      name: 'salesModule'
-    },
-    "class": "nav-link"
-  }, {
-    "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
-      return [_hoisted_11];
-    }),
-    _: 1 /* STABLE */
-  })]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_12, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
-    to: {
-      name: 'salesModule'
-    },
-    "class": "nav-link"
-  }, {
-    "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
-      return [_hoisted_13];
-    }),
-    _: 1 /* STABLE */
-  })]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_14, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
-    to: {
-      name: 'salesModule'
-    },
-    "class": "nav-link"
-  }, {
-    "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
-      return [_hoisted_15];
     }),
     _: 1 /* STABLE */
   })])])])])]);
